@@ -1,5 +1,14 @@
 <h1>Here are your balances</h1>
 
+<table>
+<tr>
+<th>Who do you owe?</th>
+<th>How much do you owe?</th>
+</tr>
+<tr>
 <% for b in @balances %>
-<p><%= b.amount %></p>
+<td><%= link_to(b.name, edit_balance_path(b.id)) %></td>
+<td><%= link_to(b.amount, edit_balance_path(b.id)) %></td>
 <% end %>
+</tr>
+</table>

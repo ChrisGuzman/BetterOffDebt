@@ -7,6 +7,10 @@ class BalancesController < ApplicationController
     @balance = Balance.find(params[:id])
   end
 
+  def edit
+    @balance = Balance.find(params[:id])
+  end
+
   def new
     @balance = Balance.new
   end
@@ -20,9 +24,18 @@ class BalancesController < ApplicationController
     end
   end
 
+  def update
+    @balance = Balance.find(params[:id])
+    if @balance.update(balance_params)
+      redirect_to balances_path
+    else
+      redirect_to edit_balance_path(@balance.id)
+    end
+  end
+
   protected
 
   def balance_params
-    params.require(:balance).permit(:amount, :id)
+    params.require(:balance).permit(:amount, :id, :name)
   end
 end

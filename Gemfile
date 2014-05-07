@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
+gem 'pry'
 gem 'rails-assets-Bootflat'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
