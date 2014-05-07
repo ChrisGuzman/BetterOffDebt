@@ -1,14 +1,18 @@
-<h1>Here are your balances</h1>
+<div class="row"><h1>Here are your balances</h1></div>
 
 <table>
-<tr>
-<th>Who do you owe?</th>
-<th>How much do you owe?</th>
-</tr>
-<tr>
-<% for b in @balances %>
-<td><%= link_to(b.name, edit_balance_path(b.id)) %></td>
-<td><%= link_to(b.amount, edit_balance_path(b.id)) %></td>
-<% end %>
-</tr>
+  <tr>
+    <th>Who do you owe?</th>
+    <th>How much do you owe?</th>
+  </tr>
+  <% for b in @balances %>
+  <tr>
+    <td><%= link_to(b.name, edit_balance_path(b.id)) %></td>
+    <td><%= link_to(b.amount, edit_balance_path(b.id)) %></td>
+  </tr>
+  <% end %>
 </table>
+
+<div class="col-md-3">
+  <%= button_to "Create new", new_balance_path, class: "btn btn-success btn-block", method: "get"%>
+</div>
