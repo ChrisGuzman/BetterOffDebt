@@ -1,7 +1,7 @@
 BetterOffDebt::Application.routes.draw do
   resources :balances
 
-  root 'balances#index'
+  # root 'balances#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
