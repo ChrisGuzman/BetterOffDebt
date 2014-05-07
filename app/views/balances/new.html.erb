@@ -1,8 +1,11 @@
+<h1>New balance</h1>
+
 <%= form_for (@balance) do |f| %>
 <div class="field">
   <%= f.label :amount, "How much?" %>
   <%= f.text_field :amount %>
-  <%= f.hidden_field :id %>
+  <%= f.label :name, "Who do you owe?" %>
+  <%= f.text_field :name %>
   <%= f.submit "Submit" %>
 </div>
 <% end %>
