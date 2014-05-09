@@ -1,14 +1,19 @@
-<div class="row"><h1>Here are your balances</h1></div>
+<div class="row">
+  <h1>Here are your balances</h1>
+</div>
 
-<table>
+<table class="table">
+
   <tr>
     <th>Who do you owe?</th>
     <th>How much do you owe?</th>
+    <th>Action</th>
   </tr>
   <% for b in @balances %>
   <tr>
     <td><%= link_to(b.name, edit_balance_path(b.id)) %></td>
     <td><%= link_to(b.amount, edit_balance_path(b.id)) %></td>
+    <td><%= link_to "Delete", balance_path(b), method: :delete, data: {confirm: 'Are you sure?'} %></td>
   </tr>
   <% end %>
 </table>

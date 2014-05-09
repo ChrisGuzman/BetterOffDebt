@@ -1,7 +1,16 @@
 BetterOffDebt::Application.routes.draw do
-  resources :balances
 
   root 'balances#index'
+
+  resources :balances
+
+  get '/login' => "logins#new", as: "login"
+  post '/login' => 'logins#create'
+  delete '/logout' => 'logins#destroy', as: "logout"
+
+  get '/signup' => 'users#new', as: "signup"
+  post '/signup' => 'users#create'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
