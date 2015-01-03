@@ -3,9 +3,11 @@ source 'https://rails-assets.org'
 
 gem 'bootflat-rails'
 gem 'pry'
+gem 'twilio-ruby'
+gem 'dotenv-rails', :groups => [:development, :test]
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.3'
+gem 'rails', '4.1.6'
 
 # Use postgreSQL as the database for Active Record
 gem 'pg'
