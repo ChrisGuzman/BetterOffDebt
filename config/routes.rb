@@ -11,8 +11,8 @@ BetterOffDebt::Application.routes.draw do
   get '/signup' => 'users#new', as: "signup"
   post '/signup' => 'users#create'
 
-    
-  post 'twilio/voice' => 'twilio#voice'
+
+  get 'twilio/voice' => 'twilio#voice'
   post 'notifications/notify' => 'notifications#notify'
   get '/sms' => 'sms#index'
   post '/sms' => 'sms#create'

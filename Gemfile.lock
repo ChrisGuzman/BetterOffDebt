@@ -75,6 +75,11 @@ GEM
     method_source (0.8.2)
     mime-types (2.4.3)
     minitest (5.5.0)
+    monetize (1.4.0)
+      money (~> 6.7)
+    money (6.7.0)
+      i18n (>= 0.6.4, <= 0.7.0)
+      sixarm_ruby_unaccent (>= 1.1.1, < 2)
     multi_json (1.10.1)
     pg (0.17.1)
     pry (0.10.1)
@@ -111,6 +116,7 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    sixarm_ruby_unaccent (1.1.1)
     slop (3.6.0)
     sprockets (2.11.0)
       hike (~> 1.2)
@@ -146,6 +152,7 @@ DEPENDENCIES
   dotenv-rails
   jbuilder (~> 1.2)
   jquery-rails
+  monetize
   pg
   pry
   rails (= 4.1.6)

@@ -4,6 +4,7 @@ source 'https://rails-assets.org'
 gem 'bootflat-rails'
 gem 'pry'
 gem 'twilio-ruby', '~> 3.12'
+gem 'monetize'
 gem 'dotenv-rails', :groups => [:development, :test]
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
