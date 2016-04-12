@@ -3,7 +3,7 @@ source 'https://rails-assets.org'
 
 gem 'bootflat-rails'
 gem 'pry'
-gem 'twilio-ruby'
+gem 'twilio-ruby', '~> 3.12'
 gem 'dotenv-rails', :groups => [:development, :test]
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -42,7 +42,7 @@ end
 gem 'rails_12factor', group: :production
 
 # Use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.1.2'
+gem 'bcrypt', '~> 3.1.2'
 
 # Use unicorn as the app server
 # gem 'unicorn'

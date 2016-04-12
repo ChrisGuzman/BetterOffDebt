@@ -10,4 +10,4 @@
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
 
-BetterOffDebt::Application.config.secret_key_base = ENV.fetch('RAILS_SECRET_KEY_BASE')
+BetterOffDebt::Application.config.secret_key_base = ENV['RAILS_SECRET_KEY_BASE']
