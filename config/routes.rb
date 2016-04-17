@@ -11,6 +11,12 @@ BetterOffDebt::Application.routes.draw do
   get '/signup' => 'users#new', as: "signup"
   post '/signup' => 'users#create'
 
+
+  get 'twilio/voice' => 'twilio#voice'
+  post 'notifications/notify' => 'notifications#notify'
+  get '/sms' => 'sms#index'
+  post '/sms' => 'sms#create'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
