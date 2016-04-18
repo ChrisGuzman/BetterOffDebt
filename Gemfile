@@ -1,11 +1,14 @@
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
-gem 'bootflat-rails'
+# gem 'bootflat-rails'
 gem 'pry'
 gem 'twilio-ruby', '~> 3.12'
 gem 'monetize'
 gem 'dotenv-rails', :groups => [:development, :test]
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'sass-rails', '>= 3.2'
+gem 'sprockets-rails', '~>  2.1.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
@@ -14,7 +17,7 @@ gem 'rails', '4.1.6'
 gem 'pg'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', :git => 'https://github.com/zakelfassi/sass-rails' # Until the gem is officially updated.
+# gem 'sass-rails', :git => 'https://github.com/zakelfassi/sass-rails' # Until the gem is officially updated.
 # gem 'sass-rails', '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets

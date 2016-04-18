@@ -1,17 +1,33 @@
-<div class="row">
-  <h1>404 Debt Not Found</h1>
-  <h2>Text (510) 404-3328 "@Debtor @Debtee $Amount"</h2>
+<div class="page-header">
+  <h1>404 Debt Not Found <small>Name and shame your friends who owe you money!</small></h1>
+</div>
+<div class="jumbotron">
+  <p class="lead">Text <a href="tel:5104043328">(510)404-3328</a> Your twitter handle, your friend's, and the amount your deadbeat friend owes you!</p>
+  <p>Examples include:</p>
+  <ul class="list-unstyled">
+    <li> @speaktochris, @yukihiro_matz, $50</li>
+    <li> @DHH #_why -$.25 </li>
+    <li> @SwiftOnSecurity owes @PHP_CEO $-3.8 </li>
+  </ul>
 </div>
 
-<table class="table">
-  <% for b in @balances %>
-  <tr>
-    <td><%= link_to(b.name, edit_balance_path(b.id)) %> owes me <%= link_to(b.amount, edit_balance_path(b.id)) %></td>
-    <td><%= link_to "Delete", balance_path(b), method: :delete, data: {confirm: 'Are you sure?'} %></td>
-  </tr>
-  <% end %>
-</table>
 
-<div class="col-md-3">
-  <%= button_to "Create new", new_balance_path, class: "btn btn-success btn-block", method: "get"%>
+<div class="row">
+  <div class="col-md-3"></div>
+
+  <div class="col-md-6">
+    <div class="text-center">
+      <div class="table-responsive table-bordered">
+        <table class="table">
+          <% for b in @balances %>
+          <tr>
+            <td class="col-xs-6 col-md-4"><%= link_to(b.debtor, "https:www.twitter.com/#{b.debtor}") %> owes <%= link_to(b.debtee || "@speaktochris", "https:www.twitter.com/#{b.debtee || '@speaktochris'}") %> <%= number_to_currency(b.amount) %></td>
+          </tr>
+          <% end %>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3"></div>
 </div>
