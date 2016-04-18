@@ -21,7 +21,7 @@
         <table class="table">
           <% for b in @balances %>
           <tr>
-            <td class="col-xs-6 col-md-4"><%= link_to(b.debtor, "https:www.twitter.com/#{b.debtor}") %> owes <%= link_to(b.debtee || "@speaktochris", "https:www.twitter.com/#{b.debtee || '@speaktochris'}") %> <%= number_to_currency(b.amount) %></td>
+            <td class="col-xs-6 col-md-4"><%= link_to(b.debtor, "https://www.twitter.com/#{b.debtor}") %> owes <%= link_to(b.debtee || "@speaktochris", "https://www.twitter.com/#{b.debtee || '@speaktochris'}") %> <%= number_to_currency(b.amount) %></td>
           </tr>
           <% end %>
         </table>
