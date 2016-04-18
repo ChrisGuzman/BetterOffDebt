@@ -19,7 +19,7 @@ class SmsController < ApplicationController
       b.update(amount: b.amount.to_f + munny)
 
       twiml = Twilio::TwiML::Response.new do |r|
-        r.Message "Got it. #{b.debtor} owes #{b.debtee} #{b.amount}"
+        r.Message "Got it. #{b.debtor} owes #{b.debtee} #{ActionController::Base.helpers.number_to_currency(b.amount)}"
       end
     rescue => ex
       Rails.logger.error ex.message
