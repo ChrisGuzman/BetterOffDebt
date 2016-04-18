@@ -1,18 +1,12 @@
 <div class="row">
-  <h1>Here are your balances</h1>
+  <h1>404 Debt Not Found</h1>
+  <h2>Text (510) 404-3328 "@Debtor @Debtee $Amount"</h2>
 </div>
 
 <table class="table">
-
-  <tr>
-    <th>Who do you owe?</th>
-    <th>How much do you owe?</th>
-    <th>Action</th>
-  </tr>
   <% for b in @balances %>
   <tr>
-    <td><%= link_to(b.name, edit_balance_path(b.id)) %></td>
-    <td><%= link_to(b.amount, edit_balance_path(b.id)) %></td>
+    <td><%= link_to(b.name, edit_balance_path(b.id)) %> owes me <%= link_to(b.amount, edit_balance_path(b.id)) %></td>
     <td><%= link_to "Delete", balance_path(b), method: :delete, data: {confirm: 'Are you sure?'} %></td>
   </tr>
   <% end %>
