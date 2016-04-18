@@ -24,7 +24,7 @@ class SmsController < ApplicationController
     rescue => ex
       Rails.logger.error ex.message
       twiml = Twilio::TwiML::Response.new do |r|
-        r.Message "Sorry! I didn't understand that. Try texting '@chris owes 10'"
+        r.Message "Sorry! I didn't understand that. Try texting '@speaktochris owes @twitter 10'"
       end
     end
     render plain: twiml.text
